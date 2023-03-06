@@ -1,0 +1,56 @@
+body {
+    margin:0;
+}
+
+html, body {
+    height:100%;
+}
+
+.slider {
+    height:100%;
+    position:relative;
+}
+
+.slider > .side-btns > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:calc(50% - 50px);
+    height:100%;
+    cursor:pointer;
+}
+
+.slider > .side-btns > div:last-child {
+    left:auto;
+    right:0;
+}
+
+.slider > .side-btns > div > span {
+    font-size:6rem;
+    font-weight:bold;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:inherit;
+    right:inherit;
+    user-select:none;
+    transition: transform .2s;
+    margin:0 20px;
+}
+
+.slider > .side-btns > div:active > span {
+    transform:translateY(-40%);
+}
+
+.slider > .slides > div {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity:0;
+}
+
+.slider > .slides > div.active {
+    opacity:1;
+}
